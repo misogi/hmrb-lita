@@ -27,6 +27,9 @@ Lita.configure do |config|
   config.redis.host = ENV["REDISTOGO_URL"] 
   config.redis.port = ENV["PORT"]
 
+  config.robot.adapter = :slack
+  config.adapters.slack.token = ENV["SLACK_API_KEY"]
+
   ## Example: Set configuration for any loaded handlers. See the handler's
   ## documentation for options.
   # config.handlers.some_handler.some_config_key = "value"
